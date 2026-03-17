@@ -37,6 +37,9 @@
             }
             #op {
                 background-image: url('imgs/op.png');
+                background-position: bottom;
+                background-size: contain;
+                background-repeat: no-repeat;                
             }
         </style>
     </head>
@@ -55,9 +58,13 @@
                 count++;
                 audio.play();                
                 catImg.innerHTML = count;
-                
+                catImg.id = 'op';
+            }
+            function close(){
+                catImg.id = 'p';
             }
             document.addEventListener('mousedown', add);
+            document.addEventListener('mouseup', close);
 
         </script>
 
